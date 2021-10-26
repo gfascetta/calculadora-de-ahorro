@@ -40,16 +40,44 @@ const calculoAhorroAnualOptimizandoHasta = (tope) => {
 
 //--------cuanto-section--------------------------------------------------
 const seccionCuanto = document.querySelector('.cuanto-section')
-const radios = document.getElementsByName('tiempo')
+const form = document.querySelector('.tiempo-form')
+const radios = form.elements['tiempo']
 
 
+//obtengo la NodeList con todos los radios
+//const radios = document.getElementsByName('tiempo')
+//transformo la NodeList en un array comun para poder recorrerlo
+//const radiosList = [...radios]
+//me quedo con el que esta seleccionado
+//seleccion = radiosList.filter(radio => radio.checked)
+//console.log(seleccion.value)
+
+// radio.addEventListener('input', (e) => {
+//     console.log(e.target.value)
+// })
+
+//REVISAR 
+function tiempoSeleccionado() {
+    for (let i = 0; i < radios.length; i++) {
+        radio[i].addEventListener('input', (e) => {
+                if (radios[i].checked) {
+                    alert(radios[i].value);
+                    break;
+                    console.log(e.target.value)
+                })
+
+        }
+    }
+}
+
+console.log(tiempoSeleccionado())
 
 
 
 const ahorroContainer = document.createElement('div')
 ahorroContainer.classList.add('resultado')
-ahorroContainer.innerHTML = `
-<p>Podés ahorrar desde ${} pesos</p>`
+    // ahorroContainer.innerHTML = `
+    // <p>Podés ahorrar desde ${} pesos</p>`
 
 
 
@@ -59,8 +87,8 @@ const seccionPropuesta = document.querySelector('.propuesta-section')
 const diasAMultiplicar = document.querySelector('#diasAMultiplicar')
 const resultadoContainer = document.createElement('div')
 resultadoContainer.classList.add('resultado')
-resultadoContainer.innerHTML = `
-<p>Con este plan podés ahorrar ${} pesos</p>`
+    // resultadoContainer.innerHTML = `
+    // <p>Con este plan podés ahorrar ${} pesos</p>`
 
 
 
