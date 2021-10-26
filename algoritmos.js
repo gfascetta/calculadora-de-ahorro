@@ -39,9 +39,7 @@ const calculoAhorroAnualOptimizandoHasta = (tope) => {
 }
 
 //--------cuanto-section--------------------------------------------------
-const seccionCuanto = document.querySelector('.cuanto-section')
-const form = document.querySelector('.tiempo-form')
-const radios = form.elements['tiempo']
+
 
 
 //obtengo la NodeList con todos los radios
@@ -49,28 +47,13 @@ const radios = form.elements['tiempo']
 //transformo la NodeList en un array comun para poder recorrerlo
 //const radiosList = [...radios]
 //me quedo con el que esta seleccionado
-//seleccion = radiosList.filter(radio => radio.checked)
+//let seleccion = radiosList.filter(radio => radio.checked)
 //console.log(seleccion.value)
 
 // radio.addEventListener('input', (e) => {
 //     console.log(e.target.value)
 // })
 
-//REVISAR 
-function tiempoSeleccionado() {
-    for (let i = 0; i < radios.length; i++) {
-        radio[i].addEventListener('input', (e) => {
-                if (radios[i].checked) {
-                    alert(radios[i].value);
-                    break;
-                    console.log(e.target.value)
-                })
-
-        }
-    }
-}
-
-console.log(tiempoSeleccionado())
 
 
 
@@ -92,11 +75,6 @@ resultadoContainer.classList.add('resultado')
 
 
 
-const botonMultiplicador = document.querySelector('#botonMultiplicador')
 
-botonMultiplicador.addEventListener('click', calcularAhorroMultiplicado)
 
-function calcularAhorroMultiplicado() {
-
-    seccionPropuesta.appendChild(resultadoContainer)
-}
+export {}
