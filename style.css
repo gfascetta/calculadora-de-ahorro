@@ -36,7 +36,7 @@ body {
     -webkit-box-shadow: 10px 10px 62px -8px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 10px 10px 62px -8px rgba(0, 0, 0, 0.6);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 }
@@ -67,10 +67,12 @@ body {
 }
 
 .hero-container__text h2 {
+    font-size: 2rem;
     font-family: var(--font-cursiva);
 }
 
 .hero-container__text p {
+    font-size: 1.5rem;
     padding: 1.5rem 0 1.5rem 0;
 }
 
@@ -98,49 +100,50 @@ body {
 }
 
 
-/* -------cuanto section-------------------------------------- */
+/* //////////////////////////////////////////////////////////// */
 
-.cuanto-section {
+.calculadora-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.cuanto-section form {
+.form-container {
     width: 50%;
-    display: inline;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container form {
+    width: 100%;
+}
+
+p {
+    font-size: 1.3rem;
 }
 
 .ahorra-desde {
-    width: 40%;
-}
-
-
-/* -----------propuesta section------------------------------- */
-
-.propuesta-section {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .propuesta-inputs {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding-left: 2rem;
     gap: 1rem;
 }
 
-.propuesta-section h2 {
+.propuesta-inputs h2 {
+    font-size: 2rem;
     font-family: var(--font-cursiva);
 }
 
-.propuesta-section p span {
+.propuesta-inputs p span {
     font-style: italic;
 }
 
