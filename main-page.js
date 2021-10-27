@@ -10,8 +10,7 @@ function mainPage(contenedor) {
                     dentro la cantidad que nos indica el sobre.</p>
                 <button class="callToAction-button">Quiero empezar ahora</button>
             </div>
-            <div class="hero-img-container">
-                <img src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0042/6040/ahorro-rankia.jpeg?1614566298" alt="" width="450">
+            <div class="hero-img-container img-fondo">
             </div>
             
     </section>

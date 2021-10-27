@@ -7,7 +7,7 @@ function calculadoraPage(contenedor) {
                 <p>Por cuanto tiempo queres comprometerte?</p>
                 
                 <p>
-                <input type="radio" name="tiempo" value="3" checked>
+                <input type="radio" name="tiempo" value="3">
                 <label for="tres-meses">3 meses</label>
                 </p>
                 <p>
@@ -21,7 +21,7 @@ function calculadoraPage(contenedor) {
                 <p>
                 <input type="radio" name="tiempo" id="otro">
                 <label for="otro">otro</label>
-                <input type="text" placeholder="meses">
+                <input type="text" placeholder="meses" id="otroNroMes">
                 </p>
             
                 <div class="propuesta-inputs">
@@ -46,14 +46,12 @@ function calculadoraPage(contenedor) {
         
             
         </section>
-        <div class="hero-img-container">
-        <img src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0042/6040/ahorro-rankia.jpeg?1614566298" alt="" width="300">
-</div>
+        <div class="hero-img-container img-fondo"></div>
     </div>
     
     
     `
-    console.log(resultado())
+    mostrarResultado()
 }
 
 //-----------obtengo los operandos-------------------------------------------------
@@ -65,7 +63,7 @@ function nroMeses() {
         //me quedo con el que esta seleccionado
     const seleccion = radiosList.find(radio => radio.checked === true)
 
-    const otroMes = document.querySelector('#otro')
+    const otroMes = document.querySelector('#otroNroMes')
     if (seleccion.id === "otro") {
         return Number(otroMes.value)
     } else {
@@ -88,7 +86,7 @@ function multiplicador() {
 }
 
 
-function resultado() {
+function mostrarResultado() {
     //selecciono el form
     const form = document.querySelector('.tiempo-form')
 
@@ -99,6 +97,8 @@ function resultado() {
 
 function calcularAhorroMultiplicado(e) {
     e.preventDefault()
+
+
 
     let maximo = nroTotalDeDias()
     let nroMultiplicador = multiplicador()
@@ -112,9 +112,20 @@ function calcularAhorroMultiplicado(e) {
             acumulador += i
         }
     }
+    mostrarContainerResultado(acumulador)
     return acumulador
 }
 
+function mostrarContainerResultado(valor) {
+    const imgContainer = document.querySelector('.hero-img-container')
+    imgContainer.classList.remove('img-fondo')
+    imgContainer.classList.add('resultado-container')
+    imgContainer.innerHTML = `
+    <div class="resultado-ahorro">
+    <p>Con este plan ahorrás ${valor} pesos</p>
+    </div>
+    `
+}
 
 
 

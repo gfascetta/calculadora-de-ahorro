@@ -1,3 +1,15 @@
+/*
+En este documento estan desarrollados
+ todos los calculos que hice antes de
+ llegar a la idea del proyecto.
+ Si bien no los utilice en la implementacion
+ final del proyecto, decidi conservarlos.
+
+ Asimismo, se incluyen notas personales en el aprendizaje
+ de la manipulacion del DOM
+*/
+
+
 const sumatoriaHasta = (numero) => {
     let acumulador = 0
     for (let i = 1; i <= numero; i++) {
@@ -72,9 +84,3 @@ const resultadoContainer = document.createElement('div')
 resultadoContainer.classList.add('resultado')
     // resultadoContainer.innerHTML = `
     // <p>Con este plan podés ahorrar ${} pesos</p>`
-
-
-
-
-
-export {}
